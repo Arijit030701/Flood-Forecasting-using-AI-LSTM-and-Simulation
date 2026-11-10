@@ -1,7 +1,7 @@
 # Forecasting Indian Floods: from Rain to River
 
 Undergraduate Project (CS496), IIT Kanpur, semester I 2026-27
-**Arijit Vishwakarma** (240175, Civil Engineering) · Supervisor: **Prof. Preeti Malakar** (CSE)
+**Arijit Vishwakarma**· Supervisor: **Prof. Preeti Malakar** (CSE)
 
 This project asks whether today's weather and flood models can warn us about big Indian floods, and how fast
 they run on the computers we have. It is one story in seven steps: each step starts from what the step before
