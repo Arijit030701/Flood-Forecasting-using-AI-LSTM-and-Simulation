@@ -1,0 +1,93 @@
+\subsection{WRF-Hydro on Eight Lab Machines}
+\label{sec:perf_wrfhydro}
+
+To test whether more cores make a model faster, I ran WRF-Hydro on eight identical CSE lab machines
+(172.27.24.10--17, the same type as Table~\ref{tab:machines}). They share my home folder over the
+network, so one build of WRF-Hydro with my MPICH~5.0.2 works on all of them. A hostfile lists the
+machines with 16 processes each, and \texttt{mpirun -np N -f hostfile ./wrf\_hydro.exe} starts the
+same run on N processes. I timed three sizes of the same kind of problem
+(Table~\ref{tab:wrfh_sizes}).
+
+\begin{table}[H]
+\centering
+\caption{The three WRF-Hydro problems used for the scaling test}
+\label{tab:wrfh_sizes}
+\small
+\begin{tabular}{lllr}
+\toprule
+\textbf{Problem} & \textbf{Area} & \textbf{River grid} & \textbf{Simulated time} \\
+\midrule
+Kallada, 250\,m & 90 $\times$ 90\,km & 360 $\times$ 360 (0.13 million cells) & 5 days \\
+Kallada, 100\,m & 90 $\times$ 90\,km & 900 $\times$ 900 (0.8 million cells) & 5 days \\
+All of Kerala, 100\,m & 310 $\times$ 520\,km & 3100 $\times$ 5200 (16 million cells) & 12 hours \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{WRF-Hydro run time (s) on the lab machines; speed-up against 1 process in brackets}
+\label{tab:wrfh_scaling}
+\small
+\begin{tabular}{rrrrr}
+\toprule
+\textbf{Processes} & \textbf{Machines} & \textbf{Kallada 250\,m} & \textbf{Kallada 100\,m} & \textbf{All Kerala 100\,m} \\
+\midrule
+1   & 1 & 104 (1.0)          & 591 (1.0)          & 5314 (1.0) \\
+2   & 1 & 63 (1.7)           & 420 (1.4)          & 3527 (1.5) \\
+4   & 1 & 44 (2.4)           & 232 (2.6)          & 2268 (2.3) \\
+8   & 1 & 33 (3.2)           & 202 (2.9)          & 1370 (3.9) \\
+16  & 1 & \textbf{32 (3.3)}  & \textbf{193 (3.1)} & 1153 (4.6) \\
+32  & 2 & 257 (0.4)          & 450 (1.3)          & 751 (7.1) \\
+64  & 4 & 265 (0.4)          & 415 (1.4)          & 467 (11.4) \\
+128 & 8 & 393 (0.3)          & 548 (1.1)          & \textbf{426 (12.5)} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\safefig{fig_wrfhydro_scaling.png}{\textwidth}
+\caption{WRF-Hydro run time (a) and speed-up (b) for the three problems. Left of the dotted line all
+processes are on one machine; to the right they are spread over 2--8 machines.}
+\label{fig:wrfh_scaling}
+\end{figure}
+
+\textbf{Why more machines did not always help.} I measured the network with a small MPI ping-pong
+program (Table~\ref{tab:pingpong}). A short message between two machines takes about 100\,$\mu$s,
+200 times longer than inside one machine, because the lab machines are joined by ordinary
+1\,Gbit/s Ethernet. WRF-Hydro sends many small messages at every 10-second routing step, so this
+delay is paid tens of thousands of times in a run.
+
+\begin{table}[H]
+\centering
+\caption{MPI ping-pong between two processes}
+\label{tab:pingpong}
+\small
+\begin{tabular}{lrr}
+\toprule
+ & \textbf{Same machine} & \textbf{Two machines} \\
+\midrule
+Time for an 8-byte message & 0.5\,$\mu$s & 108\,$\mu$s \\
+Speed for large messages & 18{,}000\,MB/s & 116\,MB/s \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+What I found:
+\begin{enumerate}
+    \item \textbf{On one machine, more cores always made the run faster}, by 3.1--4.6 times with 16
+    processes.
+    \item \textbf{For the small Kallada problems, extra machines made it slower} (up to 8 times),
+    because each process had little work and spent most of its time waiting for the network. A
+    6 times bigger grid reduced this penalty from 8 times to 2.3 times.
+    \item \textbf{For all of Kerala, the time fell at every step up to 128 processes}: 12.5 times
+    faster than one process, and 8 machines were 2.7 times faster than one machine. The gain from 64
+    to 128 processes was small, as each process's piece became small again.
+    \item For the Kerala runs I had to switch off MPICH's cross-memory-attach shortcut
+    (\texttt{MPIR\_CVAR\_\allowbreak CH4\_\allowbreak CMA\_\allowbreak ENABLE=0}), which crashed when splitting the larger input.
+\end{enumerate}
+
+So adding machines pays off only when each process has much more calculation than communication; on
+this network that needs a problem of several million cells.
+

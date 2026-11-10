@@ -1,0 +1,51 @@
+2026-10-24 13:20:21,971: Logging to /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021/output.log initialized.
+2026-10-24 13:20:21,972: ### Folder structure created at /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021
+2026-10-24 13:20:21,972: ### Run configurations for colab_t4_single
+2026-10-24 13:20:21,972: experiment_name: colab_t4_single
+2026-10-24 13:20:21,972: run_dir: /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021
+2026-10-24 13:20:21,972: train_basin_file: /content/nh_bench/basins_single.txt
+2026-10-24 13:20:21,973: validation_basin_file: /content/nh_bench/basins_single.txt
+2026-10-24 13:20:21,973: test_basin_file: /content/nh_bench/basins_single.txt
+2026-10-24 13:20:21,973: train_start_date: 1981-01-01 00:00:00
+2026-10-24 13:20:21,973: train_end_date: 2004-12-31 00:00:00
+2026-10-24 13:20:21,973: validation_start_date: 2005-01-01 00:00:00
+2026-10-24 13:20:21,973: validation_end_date: 2009-12-31 00:00:00
+2026-10-24 13:20:21,974: test_start_date: 2010-01-01 00:00:00
+2026-10-24 13:20:21,974: test_end_date: 2020-12-31 00:00:00
+2026-10-24 13:20:21,974: seed: 1
+2026-10-24 13:20:21,974: device: cuda:0
+2026-10-24 13:20:21,974: validate_every: 1000
+2026-10-24 13:20:21,974: model: cudalstm
+2026-10-24 13:20:21,975: head: regression
+2026-10-24 13:20:21,975: output_activation: linear
+2026-10-24 13:20:21,975: hidden_size: 20
+2026-10-24 13:20:21,975: initial_forget_bias: 3
+2026-10-24 13:20:21,975: output_dropout: 0.4
+2026-10-24 13:20:21,975: optimizer: Adam
+2026-10-24 13:20:21,976: loss: MSE
+2026-10-24 13:20:21,976: learning_rate: {0: 0.001}
+2026-10-24 13:20:21,976: batch_size: 256
+2026-10-24 13:20:21,976: epochs: 4
+2026-10-24 13:20:21,976: clip_gradient_norm: 1
+2026-10-24 13:20:21,977: predict_last_n: 1
+2026-10-24 13:20:21,977: seq_length: 365
+2026-10-24 13:20:21,977: num_workers: 0
+2026-10-24 13:20:21,977: log_interval: 5
+2026-10-24 13:20:21,977: log_tensorboard: False
+2026-10-24 13:20:21,977: log_n_figures: 0
+2026-10-24 13:20:21,978: save_weights_every: 4
+2026-10-24 13:20:21,978: dataset: camels_ind
+2026-10-24 13:20:21,978: data_dir: /content/nh_bench/data
+2026-10-24 13:20:21,978: dynamic_inputs: ['prcp', 'tmax', 'tmin', 'tavg', 'srad_lw', 'srad_sw', 'wind_u', 'wind_v', 'wind', 'rel_hum', 'pet_gleam', 'aet_gleam', 'evap_canopy', 'evap_surface', 'sm_lvl1', 'sm_lvl2', 'sm_lvl3', 'sm_lvl4']
+2026-10-24 13:20:21,978: target_variables: ['streamflow_mm_day']
+2026-10-24 13:20:21,978: number_of_basins: 1
+2026-10-24 13:20:21,979: train_dir: /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021/train_data
+2026-10-24 13:20:21,979: img_log_dir: /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021/img_log
+2026-10-24 13:20:22,005: ### Device cuda:0 will be used for training
+2026-10-24 13:20:22,006: Loading basin data into xarray data set.
+2026-10-24 13:20:22,740: Create lookup table and convert to pytorch tensor
+2026-10-24 13:20:31,119: Validation set to validate every 1000 epoch(s), but 'validate_n_random_basins' not set or set to zero. Will validate on the entire validation set.
+2026-10-24 13:20:33,480: Epoch 1 average loss: avg_loss: 0.47064, avg_total_loss: 0.47064
+2026-10-24 13:20:33,936: Epoch 2 average loss: avg_loss: 0.39098, avg_total_loss: 0.39098
+2026-10-24 13:20:34,401: Epoch 3 average loss: avg_loss: 0.37119, avg_total_loss: 0.37119
+2026-10-24 13:20:34,856: Epoch 4 average loss: avg_loss: 0.35449, avg_total_loss: 0.35449

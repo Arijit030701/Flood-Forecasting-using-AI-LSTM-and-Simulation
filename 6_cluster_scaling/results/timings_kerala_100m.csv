@@ -1,0 +1,9 @@
+processes,machines,seconds,status
+1,1,5314,ok
+2,1,3527,ok
+4,1,2268,ok
+8,1,1370,ok
+16,1,1153,ok
+32,2,751,ok
+64,4,467,ok
+128,8,426,ok

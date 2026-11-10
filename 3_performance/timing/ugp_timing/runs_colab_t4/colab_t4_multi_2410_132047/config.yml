@@ -1,0 +1,93 @@
+batch_size: 256
+clip_gradient_norm: 1
+commit_hash:
+data_dir: /content/nh_bench/data
+dataset: camels_ind
+device: cuda:0
+dynamic_inputs:
+- prcp
+- tmax
+- tmin
+- tavg
+- srad_lw
+- srad_sw
+- wind_u
+- wind_v
+- wind
+- rel_hum
+- pet_gleam
+- aet_gleam
+- evap_canopy
+- evap_surface
+- sm_lvl1
+- sm_lvl2
+- sm_lvl3
+- sm_lvl4
+epochs: 2
+experiment_name: colab_t4_multi
+head: regression
+hidden_size: 128
+img_log_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_multi_2410_132047/img_log
+initial_forget_bias: 3
+learning_rate:
+  0: 0.001
+log_interval: 5
+log_n_figures: 0
+log_tensorboard: false
+loss: NSE
+model: cudalstm
+num_workers: 0
+number_of_basins: 10
+optimizer: Adam
+output_activation: linear
+output_dropout: 0.4
+package_version: 1.13.0
+predict_last_n: 1
+run_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_multi_2410_132047
+save_weights_every: 2
+seed: 1
+seq_length: 365
+static_attributes:
+- cwc_area
+- elev_mean
+- slope_mean
+- dpsbar
+- p_mean
+- pet_mean
+- aridity_p_pet
+- asynchronicity
+- high_prec_freq
+- high_prec_dur
+- low_prec_freq
+- low_prec_dur
+- crops_frac
+- urban_frac_1985
+- water_frac
+- lai_max
+- sand_frac_top
+- silt_frac_top
+- clay_frac_top
+- soil_depth
+- soil_awc_top
+- soil_conductivity_top
+- geol_porosity
+- geol_permeability
+- num_dams
+- total_storage
+- pop_density_2000
+target_variables:
+- streamflow_mm_day
+test_basin_file: /content/nh_bench/basins_multi.txt
+test_end_date: 31/12/2020
+test_start_date: 01/01/2010
+train_basin_file: /content/nh_bench/basins_multi.txt
+train_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_multi_2410_132047/train_data
+train_end_date: 31/12/2004
+train_start_date: 01/01/1981
+validate_every: 1000
+validation_basin_file: /content/nh_bench/basins_multi.txt
+validation_end_date: 31/12/2009
+validation_start_date: 01/01/2005

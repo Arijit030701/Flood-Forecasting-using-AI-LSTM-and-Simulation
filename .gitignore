@@ -1,3 +1,4 @@
+# Large WRF input/output
 *.grib
 *.grd
 met_em*
@@ -5,5 +6,24 @@ wrfout*
 wrfrain*
 wrfinput*
 wrfbdy*
+wrffdda*
+
+# WRF-Hydro forcing, output and restart files
+*.LDASIN_DOMAIN1
+*.LDASOUT_DOMAIN1
+*.RTOUT_DOMAIN1
+*.CHRTOUT_DOMAIN1
+*.CHRTOUT_GRID1
+*CHANOBS*
+HYDRO_RST.*
+RESTART.*
+
+# Model checkpoints and Python leftovers
+*.pt
 *.whl
-data/
+__pycache__/
+.ipynb_checkpoints/
+
+# Data folder: only its README goes to git
+data/*
+!data/README.md

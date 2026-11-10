@@ -1,0 +1,218 @@
+attribute_means:
+  aridity_p_pet: 0.5804
+  asynchronicity: 0.341393205
+  clay_frac_top: 31.2
+  crops_frac: 0.49804830000000005
+  cwc_area: 7811.0
+  dpsbar: 5.0636936945999995
+  elev_mean: 407.31632958600005
+  geol_permeability: 0.7312394888
+  geol_porosity: 0.08151887840000001
+  high_prec_dur: 1.8993399999999998
+  high_prec_freq: 21.683339999999998
+  lai_max: 3.7969
+  low_prec_dur: 16.64888
+  low_prec_freq: 293.54667
+  num_dams: 10.9
+  p_mean: 2.4530000000000003
+  pet_mean: 4.255
+  pop_density_2000: 254.56440121999998
+  sand_frac_top: 43.0
+  silt_frac_top: 25.8
+  slope_mean: 6.1190511613
+  soil_awc_top: 0.20347570520000002
+  soil_conductivity_top: 14.7277236884
+  soil_depth: 6.0365442602
+  total_storage: 1220881751.2
+  urban_frac_1985: 0.0034983390999999996
+  water_frac: 0.0168495
+attribute_stds:
+  aridity_p_pet: 0.15237614278124015
+  asynchronicity: 0.017375767719940923
+  clay_frac_top: 17.592927872048786
+  crops_frac: 0.20563460923419483
+  cwc_area: 9798.29759589786
+  dpsbar: 2.208554999890932
+  elev_mean: 160.51961566601454
+  geol_permeability: 0.011265095224071993
+  geol_porosity: 0.04893676939220716
+  high_prec_dur: 0.18076295220229416
+  high_prec_freq: 0.6547535587277603
+  lai_max: 3.0815194105794266
+  low_prec_dur: 3.3482620608973317
+  low_prec_freq: 15.636341016864096
+  num_dams: 21.398078833806032
+  p_mean: 0.534915361944714
+  pet_mean: 0.2283394159773755
+  pop_density_2000: 211.83597032084487
+  sand_frac_top: 23.166067138525406
+  silt_frac_top: 9.150591966279194
+  slope_mean: 4.555602674347359
+  soil_awc_top: 0.014906543417609601
+  soil_conductivity_top: 3.976001056526615
+  soil_depth: 11.841444766420585
+  total_storage: 2081170200.906189
+  urban_frac_1985: 0.006993806830628612
+  water_frac: 0.0076996942688221945
+xarray_feature_scale:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    aet_gleam:
+      dims: []
+      attrs: {}
+      data: 0.9720842838287354
+    evap_canopy:
+      dims: []
+      attrs: {}
+      data: 0.6306154727935791
+    evap_surface:
+      dims: []
+      attrs: {}
+      data: 0.7764737606048584
+    pet_gleam:
+      dims: []
+      attrs: {}
+      data: 0.8574127554893494
+    prcp:
+      dims: []
+      attrs: {}
+      data: 8.198494911193848
+    rel_hum:
+      dims: []
+      attrs: {}
+      data: 22.823745727539062
+    sm_lvl1:
+      dims: []
+      attrs: {}
+      data: 11.311982154846191
+    sm_lvl2:
+      dims: []
+      attrs: {}
+      data: 15.692811965942383
+    sm_lvl3:
+      dims: []
+      attrs: {}
+      data: 31.092920303344727
+    sm_lvl4:
+      dims: []
+      attrs: {}
+      data: 50.815818786621094
+    srad_lw:
+      dims: []
+      attrs: {}
+      data: 47.19133758544922
+    srad_sw:
+      dims: []
+      attrs: {}
+      data: 72.3025131225586
+    streamflow_mm_day:
+      dims: []
+      attrs: {}
+      data: 3.3858046531677246
+    tavg:
+      dims: []
+      attrs: {}
+      data: 4.858034610748291
+    tmax:
+      dims: []
+      attrs: {}
+      data: 4.694822788238525
+    tmin:
+      dims: []
+      attrs: {}
+      data: 5.778884410858154
+    wind:
+      dims: []
+      attrs: {}
+      data: 1.497705340385437
+    wind_u:
+      dims: []
+      attrs: {}
+      data: 2.271299362182617
+    wind_v:
+      dims: []
+      attrs: {}
+      data: 1.7051661014556885
+xarray_feature_center:
+  coords: {}
+  attrs: {}
+  dims: {}
+  data_vars:
+    aet_gleam:
+      dims: []
+      attrs: {}
+      data: 1.2330864667892456
+    evap_canopy:
+      dims: []
+      attrs: {}
+      data: 0.3083972632884979
+    evap_surface:
+      dims: []
+      attrs: {}
+      data: 0.6800811886787415
+    pet_gleam:
+      dims: []
+      attrs: {}
+      data: 2.802302360534668
+    prcp:
+      dims: []
+      attrs: {}
+      data: 2.2718076705932617
+    rel_hum:
+      dims: []
+      attrs: {}
+      data: 46.28718566894531
+    sm_lvl1:
+      dims: []
+      attrs: {}
+      data: 8.971477508544922
+    sm_lvl2:
+      dims: []
+      attrs: {}
+      data: 66.23140716552734
+    sm_lvl3:
+      dims: []
+      attrs: {}
+      data: 155.40505981445312
+    sm_lvl4:
+      dims: []
+      attrs: {}
+      data: 487.7795715332031
+    srad_lw:
+      dims: []
+      attrs: {}
+      data: 371.2923889160156
+    srad_sw:
+      dims: []
+      attrs: {}
+      data: 301.97235107421875
+    streamflow_mm_day:
+      dims: []
+      attrs: {}
+      data: 0.5155929327011108
+    tavg:
+      dims: []
+      attrs: {}
+      data: 25.911401748657227
+    tmax:
+      dims: []
+      attrs: {}
+      data: 32.662742614746094
+    tmin:
+      dims: []
+      attrs: {}
+      data: 19.1602840423584
+    wind:
+      dims: []
+      attrs: {}
+      data: 2.8200435638427734
+    wind_u:
+      dims: []
+      attrs: {}
+      data: 1.3672842979431152
+    wind_v:
+      dims: []
+      attrs: {}
+      data: 0.3052881956100464

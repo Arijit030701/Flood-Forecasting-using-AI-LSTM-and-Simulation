@@ -1,0 +1,65 @@
+batch_size: 256
+clip_gradient_norm: 1
+commit_hash:
+data_dir: /content/nh_bench/data
+dataset: camels_ind
+device: cuda:0
+dynamic_inputs:
+- prcp
+- tmax
+- tmin
+- tavg
+- srad_lw
+- srad_sw
+- wind_u
+- wind_v
+- wind
+- rel_hum
+- pet_gleam
+- aet_gleam
+- evap_canopy
+- evap_surface
+- sm_lvl1
+- sm_lvl2
+- sm_lvl3
+- sm_lvl4
+epochs: 4
+experiment_name: colab_t4_single
+head: regression
+hidden_size: 20
+img_log_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021/img_log
+initial_forget_bias: 3
+learning_rate:
+  0: 0.001
+log_interval: 5
+log_n_figures: 0
+log_tensorboard: false
+loss: MSE
+model: cudalstm
+num_workers: 0
+number_of_basins: 1
+optimizer: Adam
+output_activation: linear
+output_dropout: 0.4
+package_version: 1.13.0
+predict_last_n: 1
+run_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021
+save_weights_every: 4
+seed: 1
+seq_length: 365
+target_variables:
+- streamflow_mm_day
+test_basin_file: /content/nh_bench/basins_single.txt
+test_end_date: 31/12/2020
+test_start_date: 01/01/2010
+train_basin_file: /content/nh_bench/basins_single.txt
+train_dir: 
+  /content/drive/MyDrive/ugp_timing/runs_colab_t4/colab_t4_single_2410_132021/train_data
+train_end_date: 31/12/2004
+train_start_date: 01/01/1981
+validate_every: 1000
+validation_basin_file: /content/nh_bench/basins_single.txt
+validation_end_date: 31/12/2009
+validation_start_date: 01/01/2005

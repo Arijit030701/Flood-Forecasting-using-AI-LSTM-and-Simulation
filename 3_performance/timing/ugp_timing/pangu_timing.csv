@@ -1,0 +1,2 @@
+label,host,cpu,device,provider,threads,model_load_s,first_step_s,mean_step_s,steps_timed,forecast_72h_s,peak_ram_gb
+colab_t4,904c93b5faaa,Intel(R) Xeon(R) CPU @ 2.00GHz,gpu,CUDAExecutionProvider,all,15.5,7.88,7.44,10,89.2,7.8
