@@ -18,3 +18,4 @@ Charts used in the final presentation (Canva deck "UGP Project Presentation").
 | `charts/overview_wrfhydro_grids.png` | The models we worked on | WRF-Hydro: 1 km land cells and 250 m river cells (illustration) |
 | `charts/map_fourcastnet_5_floods.png` | FourCastNet: what we did | The 5 flood locations; gauge rain vs FourCastNet rain at each, plus the 25 km box at Mumbai |
 | `charts/map_pangu_5_floods.png` | Pangu-Weather: what we did | The 5 flood locations; Pangu's pressure and 850 hPa humidity change at each |
+| `charts/wrf_grids_27_9_3km.png` | Step 3: Zooming in with WRF | The 27, 9 and 3 km WRF boxes from the Mumbai 2005 `namelist.wps`, and the same 150 km around Mumbai on each grid with a 10 km storm for scale |
