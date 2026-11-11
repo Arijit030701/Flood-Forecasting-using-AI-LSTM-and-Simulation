@@ -19,3 +19,4 @@ Charts used in the final presentation (Canva deck "UGP Project Presentation").
 | `charts/map_fourcastnet_5_floods.png` | FourCastNet: what we did | The 5 flood locations; gauge rain vs FourCastNet rain at each, plus the 25 km box at Mumbai |
 | `charts/map_pangu_5_floods.png` | Pangu-Weather: what we did | The 5 flood locations; Pangu's pressure and 850 hPa humidity change at each |
 | `charts/wrf_grids_27_9_3km.png` | Step 3: Zooming in with WRF | The 27, 9 and 3 km WRF boxes from the Mumbai 2005 `namelist.wps`, and the same 150 km around Mumbai on each grid with a 10 km storm for scale |
+| `charts/mumbai2005_wrf_rain_wrong_place.png` | Why was the rain in the wrong place? | IMD flood-day rain around Mumbai (26-27 Jul 2005) and where WRF runs A-E put their heaviest rain (from `2_wrf/results/results_imd2/wrf_vs_imd_scores.csv`) |
