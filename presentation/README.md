@@ -10,3 +10,9 @@ Charts used in the final presentation (Canva deck "UGP Project Presentation").
 | `charts/slide09_server_cores.png` | Step 4: Making it run faster | WRF time on different sets of server cores |
 | `charts/slide10_lstm_202_basins.png` | Step 5: From rain to river flow | Test NSE across basins, multi-basin vs single-basin |
 | `charts/slide13_eight_machines.png` | Step 7: One model on eight machines | WRF-Hydro run time and speed-up up to 128 processes |
+| `charts/overview_kerala_imd_vs_wrf.png` | How a flood forecast is made | IMD observed vs WRF 3 km rain, Kerala, 14–17 Aug 2018 |
+| `charts/overview_fourcastnet_globe.png` | The models we worked on | FourCastNet: the whole Earth on one grid (illustration) |
+| `charts/overview_pangu_layers.png` | The models we worked on | Pangu-Weather: the surface plus layers of air (illustration) |
+| `charts/overview_wrf_nested_domains.png` | The models we worked on | WRF 27/9/3 km boxes from the Mumbai 2005 `namelist.wps` |
+| `charts/overview_lstm_202_basins.png` | The models we worked on | The 202 CAMELS-IND basins, coloured by LSTM test NSE |
+| `charts/overview_wrfhydro_grids.png` | The models we worked on | WRF-Hydro: 1 km land cells and 250 m river cells (illustration) |
