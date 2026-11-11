@@ -16,3 +16,5 @@ Charts used in the final presentation (Canva deck "UGP Project Presentation").
 | `charts/overview_wrf_nested_domains.png` | The models we worked on | WRF 27/9/3 km boxes from the Mumbai 2005 `namelist.wps` |
 | `charts/overview_lstm_202_basins.png` | The models we worked on | The 202 CAMELS-IND basins, coloured by LSTM test NSE |
 | `charts/overview_wrfhydro_grids.png` | The models we worked on | WRF-Hydro: 1 km land cells and 250 m river cells (illustration) |
+| `charts/map_fourcastnet_5_floods.png` | FourCastNet: what we did | The 5 flood locations; gauge rain vs FourCastNet rain at each, plus the 25 km box at Mumbai |
+| `charts/map_pangu_5_floods.png` | Pangu-Weather: what we did | The 5 flood locations; Pangu's pressure and 850 hPa humidity change at each |
