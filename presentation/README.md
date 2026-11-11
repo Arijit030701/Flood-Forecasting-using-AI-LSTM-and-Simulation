@@ -23,3 +23,5 @@ Charts used in the final presentation (Canva deck "UGP Project Presentation").
 | `charts/wrf_speed_laptop_vs_server.png` | Step 4: Making WRF run faster | Same 36-hour WRF forecast (run B): laptop 2 h 43 min vs CSE server 8 fast cores 1 h 33 min (`2_wrf/README.md`) |
 | `charts/wrf_speed_which_cores.png` | Step 4: Making WRF run faster | 6-hour WRF forecast time on each set of i9-14900 cores (`2_wrf/timing/benchmark_server.csv`) |
 | `charts/wrf_speed_why_slow_cores_hurt.png` | Step 4: Making WRF run faster | Why slow cores slow WRF down: the map is cut into one piece per core, and every core waits for the slowest after each time step (illustration) |
+| `charts/river_overlay_india.png` | From rain to floods | Transparent layer for the India satellite image (Sentinel-2 cloudless by EOX, BBOX 67,5.5,92,28.9): the 202 CAMELS-IND gauges of the LSTM, Ambabal (3002) and Pattazhy (15022) ringed |
+| `charts/river_overlay_kallada.png` | From rain to floods | Transparent layer for the Kallada satellite image (Sentinel-2 cloudless by EOX, BBOX 76.50,8.68,77.30,9.42): Pattazhy gauge, Thenmala dam, Punalur, Ashtamudi Lake, Kollam |
